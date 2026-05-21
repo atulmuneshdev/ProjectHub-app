@@ -1,50 +1,192 @@
-# Welcome to your Expo app 👋
+# ProjectHub
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A complete React Native mobile app where students, developers, and industries can buy, sell, upload, and assign software projects.
 
-## Get started
+## 📱 Features
 
-1. Install dependencies
+### User Roles
+- **Student**: Browse, buy, and upload projects
+- **Developer**: Sell projects, accept industry work
+- **Industry**: Post requirements, hire, track projects
 
-   ```bash
-   npm install
-   ```
+### Core Screens
+- ✨ Splash Screen
+- 👋 Onboarding Screen
+- 🔐 Login / Register
+- 🏠 Home Dashboard
+- 📂 All Projects
+- 🔍 Project Details
+- ⬆️ Upload Project
+- 📋 Post Industry Requirement
+- 👤 Profile & Settings
+- 🛎️ Notifications
+- 💬 Chat / Messages
+- 💳 Payment Screen
+- 📁 My Projects
+- 📌 Assigned Projects
 
-2. Start the app
+## 🛠️ Tech Stack
+- React Native with Expo Router
+- expo-image-picker (for gallery access)
+- NativeWind / Tailwind CSS
+- Reusable components
+- Professional color palette
+- Modern UI/UX
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 📦 Installation
 
 ```bash
-npm run reset-project
+# Install dependencies
+npm install
+
+# Start the app
+npx expo start
+
+# Run on Android
+npx expo start --android
+
+# Run on iOS
+npx expo start --ios
+
+# Run on Web
+npx expo start --web
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📱 Build APK for Android
 
-## Learn more
+### Prerequisites
+1. Create an Expo account at https://expo.dev/signup
+2. Install EAS CLI:
+```bash
+npm install -g eas-cli
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Build APK Build Steps
+1. **Login to Expo:**
+```bash
+eas login
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. **Configure the project (first time only):**
+```bash
+eas build:configure
+```
 
-## Join the community
+3. **Build the APK (preview):**
+```bash
+eas build --platform android --profile preview
+```
 
-Join our community of developers creating universal apps.
+4. **Wait for build to complete, then download the APK from the Expo dashboard!
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Quick Notes:
+- `eas.json` already configured for preview APK builds
+- Preview builds take ~10-20 minutes
+- APK will be available at https://expo.dev/accounts/[your-account]/projects/projecthub/builds
+
+
+## �� Screenshots
+
+<table>
+  <tr>
+    <td><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80" width="200"></td>
+    <td><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&q=80" width="200"></td>
+    <td><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" width="200"></td>
+    <td><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" width="200"></td>
+  </tr>
+  <tr>
+    <td align="center">Splash Screen</td>
+    <td align="center">Home Dashboard</td>
+    <td align="center">Project Cards</td>
+    <td align="center">Project Detail</td>
+  </tr>
+</table>
+
+## 📂 Project Structure
+```
+ProjectHub/
+├── app/
+│   ├── index.tsx
+│   ├── splash.tsx
+│   ├── onboarding.tsx
+│   ├── login.tsx
+│   ├── register.tsx
+│   ├── _layout.tsx
+│   └── (app)/
+│       ├── _layout.tsx
+│       ├── home.tsx
+│       ├── projects.tsx
+│       ├── upload.tsx
+│       ├── post-requirement.tsx
+│       ├── project-detail.tsx
+│       ├── notifications.tsx
+│       ├── profile.tsx
+│       ├── edit-profile.tsx
+│       ├── my-projects.tsx
+│       ├── assigned-projects.tsx
+│       ├── chat.tsx
+│       └── payment.tsx
+├── components/
+│   ├── Button.tsx
+│   ├── Input.tsx
+│   └── ProjectCard.tsx
+├── config/
+│   └── firebase.ts
+├── constants/
+│   ├── Colors.ts
+│   └── Data.ts
+├── app.json
+├── package.json
+└── ...
+```
+
+## 🎨 Features
+
+- **Modern UI**: Clean, professional design with smooth animations
+- **Image Upload**: Gallery access with image preview (up to 5 images)
+- **Search & Filters**: Find projects by category, price, technology
+- **Floating Tab Bar**: Beautiful custom bottom navigation
+- **Image Gallery**: Interactive thumbnail gallery on project details
+- **Dummy Data**: Complete app with realistic sample content
+- **Reusable Components**: Button, Input, ProjectCard, and more
+
+## 📋 Project Categories
+- Web Development
+- App Development
+- React Native Projects
+- MERN Stack Projects
+- Java Projects
+- Python Projects
+- AI/ML Projects
+- UI/UX Design
+- College Final Year Projects
+- Mini Projects
+- Industry Projects
+
+## 📱 Permissions
+
+### Gallery Access
+- Photos: Used to upload project images
+- Configured in `app.json` with custom permission messages
+
+## 🚀 Future Enhancements
+- Firebase Authentication & Firestore integration
+- Real-time chat functionality
+- Payment gateway integration (Stripe/PayPal)
+- User profiles with skills showcase
+- Industry project assignment tracking
+- Notifications system
+- Advanced search and filtering
+
+## 📄 License
+MIT License - Feel free to use this project for learning and development!
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+## 📧 Contact
+For questions or feedback, please reach out!
+
+---
+
+Built with ❤️ using React Native & Expo
